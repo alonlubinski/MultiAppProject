@@ -1,0 +1,4 @@
+include ':customer'
+include ':common'
+include ':manager'
+rootProject.name = "MultiAppProject"
