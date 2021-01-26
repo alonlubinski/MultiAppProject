@@ -5,7 +5,7 @@ public class Garage {
     private String name;
     private String address;
     private boolean open;
-    private String[] cars;
+    private String[] Cars;
 
     // Constructors
     public Garage() {
@@ -15,7 +15,7 @@ public class Garage {
         this.name = name;
         this.address = address;
         this.open = open;
-        this.cars = cars;
+        this.Cars = cars;
     }
 
     // Getters and setters
@@ -44,10 +44,10 @@ public class Garage {
     }
 
     public String[] getCars() {
-        return cars;
+        return Cars;
     }
 
     public void setCars(String[] cars) {
-        this.cars = cars;
+        this.Cars = cars;
     }
 }
