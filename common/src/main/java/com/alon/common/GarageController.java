@@ -16,7 +16,7 @@ public class GarageController implements Callback<Garage> {
 
     private Callback_Garage callback_garage;
 
-    public void start(Callback_Garage callback_garage){
+    public void start(Callback_Garage callback_garage) {
         this.callback_garage = callback_garage;
         Gson gson = new GsonBuilder().setLenient().create();
         Retrofit retrofit = new Retrofit.Builder()
@@ -30,10 +30,10 @@ public class GarageController implements Callback<Garage> {
 
     @Override
     public void onResponse(Call<Garage> call, Response<Garage> response) {
-        if(response.isSuccessful()){
+        if (response.isSuccessful()) {
             Garage garage = response.body();
             System.out.println(garage.getName());
-            if(callback_garage != null){
+            if (callback_garage != null) {
                 callback_garage.garage(garage);
             }
         } else {
