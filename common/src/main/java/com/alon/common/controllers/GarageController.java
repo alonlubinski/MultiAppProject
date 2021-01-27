@@ -1,6 +1,8 @@
-package com.alon.common;
+package com.alon.common.controllers;
 
 
+import com.alon.common.dao.GarageAPI;
+import com.alon.common.models.Garage;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

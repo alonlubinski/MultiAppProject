@@ -1,8 +1,10 @@
-package com.alon.common;
+package com.alon.common.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.alon.common.models.UsageInfo;
 
 import java.util.List;
 

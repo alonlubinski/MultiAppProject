@@ -1,9 +1,12 @@
-package com.alon.common;
+package com.alon.common.controllers;
 
 import android.content.Context;
 import android.util.Log;
 
 import androidx.room.Room;
+
+import com.alon.common.db.AppDatabase;
+import com.alon.common.models.UsageInfo;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -58,13 +61,14 @@ public class UsageInfoHelper {
                     usageTime -= TimeUnit.MINUTES.toMillis(minutes);
                     long seconds = TimeUnit.MILLISECONDS.toSeconds(usageTime) % 60;
                     sb.append(hours);
-                    sb.append(":");
+                    sb.append(" hours, ");
                     sb.append(minutes);
-                    sb.append(":");
+                    sb.append(" minutes and ");
                     sb.append(seconds);
+                    sb.append(" seconds");
                 }
                 if (callback_usageInfo != null) {
-                    callback_usageInfo.dataReady(sb.toString());
+                    callback_usageInfo.dataReady("Usage Time: " + sb.toString());
                 }
             }
         }).start();

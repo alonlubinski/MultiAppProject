@@ -1,4 +1,4 @@
-package com.alon.common;
+package com.alon.common.models;
 
 public class Garage {
 
